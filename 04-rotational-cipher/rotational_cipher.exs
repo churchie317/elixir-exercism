@@ -14,12 +14,12 @@ defmodule RotationalCipher do
     |> to_string
   end
 
-  defp rotate_char(char, shift) when char >= 65 and char <= 90 do
-    rem(char - 65 + shift, 26) + 65
+  defp rotate_char(char, shift) when char >= ?A and char <= ?Z do
+    rem(char - ?A + shift, 26) + ?A
   end
 
-  defp rotate_char(char, shift) when char >= 97 and char <= 122 do
-    rem(char - 97 + shift, 26) + 97
+  defp rotate_char(char, shift) when char >= ?a and char <= ?z do
+    rem(char - ?a + shift, 26) + ?a
   end
 
   defp rotate_char(char, _shift) do
